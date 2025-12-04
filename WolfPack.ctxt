@@ -16,4 +16,6 @@ comment7.params=
 comment7.target=itumulator.world.Location\ getCaveLocation()
 comment8.params=
 comment8.target=int\ getPackSize()
-numComments=9
+comment9.params=
+comment9.target=int\ getWolfPack()
+numComments=10
