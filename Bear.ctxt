@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=Bear
-comment1.params=territoryCenter
-comment1.target=Bear(itumulator.world.Location)
-comment2.params=world
-comment2.target=void\ act(itumulator.world.World)
+comment1.params=
+comment1.target=int\ getCarcassMeatSize()
+comment2.params=territoryCenter
+comment2.target=Bear(itumulator.world.Location)
 comment3.params=world
-comment3.target=boolean\ hunt(itumulator.world.World)
+comment3.target=void\ act(itumulator.world.World)
 comment4.params=world
-comment4.target=boolean\ forage(itumulator.world.World)
+comment4.target=boolean\ hunt(itumulator.world.World)
 comment5.params=world
-comment5.target=void\ moveInTerritory(itumulator.world.World)
-numComments=6
+comment5.target=boolean\ forage(itumulator.world.World)
+comment6.params=world
+comment6.target=void\ moveInTerritory(itumulator.world.World)
+numComments=7

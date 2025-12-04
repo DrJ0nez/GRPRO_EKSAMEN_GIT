@@ -2,8 +2,9 @@
 comment0.target=Fungi
 comment1.params=host
 comment1.target=Fungi(Carcass)
+comment1.text=if(hasShape)\ {\n\n\ \ \ \ }\n
 comment2.params=world
 comment2.target=void\ act(itumulator.world.World)
-comment3.params=target
-comment3.target=void\ dealDamage(Carcass)
+comment3.params=world\ target
+comment3.target=void\ dealDamage(itumulator.world.World,\ Carcass)
 numComments=4

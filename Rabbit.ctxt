@@ -1,7 +1,15 @@
 #BlueJ class context
 comment0.target=Rabbit
 comment1.params=
-comment1.target=Rabbit()
-comment2.params=world
-comment2.target=void\ act(itumulator.world.World)
-numComments=3
+comment1.target=int\ getCarcassMeatSize()
+comment2.params=
+comment2.target=void\ infectWithFungi()
+comment3.params=
+comment3.target=boolean\ hasFungi()
+comment4.params=
+comment4.target=itumulator.executable.DisplayInformation\ getInformation()
+comment5.params=
+comment5.target=Rabbit()
+comment6.params=world
+comment6.target=void\ act(itumulator.world.World)
+numComments=7

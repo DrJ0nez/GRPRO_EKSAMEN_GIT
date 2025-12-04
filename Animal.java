@@ -1,5 +1,6 @@
 import itumulator.world.World;
 import itumulator.simulator.Actor;
+import itumulator.world.*;
 
 public abstract class Animal implements Actor {
     protected int hunger;
@@ -26,8 +27,8 @@ public abstract class Animal implements Actor {
         energy--;
 
         // her er betingelserne for hvornår et dyr dør.
-        if (hunger > 100 || energy <= 0 || age >= maxAge) {
-            world.delete(this);
+        if (hunger > 10 || energy <= 0 || age >= maxAge) {
+            die(world);
             return;
         }
         
@@ -46,6 +47,19 @@ public abstract class Animal implements Actor {
 
     public void dealDamage(Animal target) {
             target.receiveDamage(this.damage);
+    }
+
+    protected void die(World world) {
+        if (!world.contains(this)) return;
+
+        Location loc = world.getLocation(this);
+        world.delete(this);
+
+        if (loc != null) {
+            int meat = Math.max(5, getCarcassMeatSize());
+            Carcass carcass = new Carcass(meat);
+            world.setTile(loc, carcass);
+        }
     }
     
     /*public void eat(World world, Actor food) {

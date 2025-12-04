@@ -11,10 +11,10 @@ public class Fungi implements Actor {
     int energy = 0;
     boolean hasShape = false;
 
-    if(hasShape) {
+    /*if(hasShape) {
 
     }
-    
+    */
 
     Fungi(Carcass host) {
         this.host = host; 
