@@ -51,8 +51,7 @@ public class Carcass implements Actor {
             }
         }
     }
-
-
+  
     public void depleteMeat() {
         remainingMeat -= 10;
         if(remainingMeat < 0) {
@@ -60,6 +59,25 @@ public class Carcass implements Actor {
         }
     }
     
+    public int consume(World world, int wantedAmount) {
+        if (remainingMeat <= 0) return 0;
+
+        int eaten = Math.min(wantedAmount, remainingMeat);
+        remainingMeat -= eaten;
+
+        if (remainingMeat <= 0) {
+            Location loc = world.getLocation(this);
+            world.delete(this);
+
+            if (hasInternalFungi && loc != null) {
+                int ttl = 10 + originalSize / 2;
+                world.setTile(loc, new Fungi(ttl, originalSize));
+            }
+        }
+
+        return eaten;
+    }
+
     public boolean hasInternalFungi() {
         return hasInternalFungi;
     }
