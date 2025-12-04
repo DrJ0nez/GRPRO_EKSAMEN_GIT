@@ -21,33 +21,36 @@ public class Carcass implements Actor {
         this.originalSize = Math.max(1, meat);
 
 
-        // Større dyr → længere tid før ådselet forsvinder
+        // Større dyr = længere tid før ådselet forsvinder
         this.maxAge = 30 + meat;
         this.hasInternalFungi = withFungi;
     }
 
     @Override
-    public act(World world) {
+    public void act(World world) {
         if (!world.contains(this)) return;
-        
+
         age++;
 
-    //K3-2a: Lille chance for at der kan opstå svamp i ådslet af sig selv
-    if (!hasInternalFungi) {
-        Random r = new Random();
-        if (r.nextDouble() < 0.02) {
-            hasInternalFungi = true;
+        // Lille chance for at der opstår svamp i et ådsel (K3-2a)
+        if (!hasInternalFungi) {
+            Random r = new Random();
+            if (r.nextDouble() < 0.02) {
+                hasInternalFungi = true;
+            }
+        }
+
+        // Nedbrydning over tid (K3-1c)
+        if (age >= maxAge || remainingMeat <= 0) {
+            Location loc = world.getLocation(this);
+            world.delete(this);
+
+            // Hvis der var svamp i ådselet, dukker den nu op på kortet (K3-2a)
+            if (hasInternalFungi && loc != null) {
+                int ttl = 10 + originalSize / 2; // Større ådsel = Svamp lever længere (K3-2b)
+                world.setTile(loc, new Fungi(ttl, originalSize));
+            }
         }
     }
-
-    if (age >= maxAge || remainingMeat <= 0) {
-        Location loc = world.getLocation(this);
-        world.delete(this);
-
-        if (hasInternalFungi && loc != null) {
-            int ttl = 10 + (originalSize / 2); //Større ådsel = svamp lever længere
-            world.setTile(loc, new Fungi(ttl, originalSize));
-        }
-    }
-    }
+    
 }
