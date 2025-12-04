@@ -4,6 +4,11 @@ import java.util.*;
 
 public class Bear extends Animal {
     private Location territoryCenter;
+    
+    @Override
+    public int getCarcassMeatSize() {
+        return 40;
+    }
 
     public Bear(Location territoryCenter) {
         super(400, 200, 40); 

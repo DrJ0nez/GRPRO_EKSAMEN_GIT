@@ -9,6 +9,11 @@ public class Rabbit extends Animal implements DynamicDisplayInformationProvider 
 
     private boolean hasFungi = false;
 
+    @Override
+    public int getCarcassMeatSize() {
+        return 10;
+    }
+
     public void infectWithFungi() {
         this.hasFungi = true;
     }
