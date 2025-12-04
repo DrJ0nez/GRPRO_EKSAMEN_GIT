@@ -1,7 +1,5 @@
 import itumulator.world.World;
-import itumulator.world.Location;
 import itumulator.simulator.Actor;
-import java.util.Set;
 
 public abstract class Animal implements Actor {
     protected int hunger;

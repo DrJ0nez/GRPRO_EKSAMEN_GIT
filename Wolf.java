@@ -1,10 +1,5 @@
-import itumulator.executable.DisplayInformation;
-import itumulator.executable.Program;
 import itumulator.world.Location;
 import itumulator.world.World;
-import itumulator.world.NonBlocking;
-import itumulator.simulator.Actor;
-import java.util.Scanner;
 import java.util.*;
 
 public class Wolf extends Animal {
