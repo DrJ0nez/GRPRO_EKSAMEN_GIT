@@ -27,7 +27,7 @@ public class Carcass implements Actor {
     }
 
     @Override
-    public act(World world) {
+    public void act(World world) {
         if (!world.contains(this)) return;
         
         age++;
