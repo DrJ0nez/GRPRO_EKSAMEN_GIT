@@ -1,3 +1,19 @@
 #BlueJ class context
 comment0.target=Carcass
-numComments=1
+comment1.params=meat
+comment1.target=Carcass(int)
+comment2.params=meat\ withFungi
+comment2.target=Carcass(int,\ boolean)
+comment3.params=world
+comment3.target=void\ act(itumulator.world.World)
+comment4.params=
+comment4.target=void\ depleteMeat()
+comment5.params=world\ wantedAmount
+comment5.target=int\ consume(itumulator.world.World,\ int)
+comment6.params=
+comment6.target=boolean\ hasInternalFungi()
+comment7.params=
+comment7.target=void\ infectWithFungi()
+comment8.params=
+comment8.target=int\ getOriginalSize()
+numComments=9

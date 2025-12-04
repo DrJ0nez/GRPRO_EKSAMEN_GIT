@@ -35,10 +35,18 @@ public class Main {
             //split linje op i to dele, hvor første del er typen der skal indsættes i verden.
             String[] parts = line.split(" ");
             type = parts[0];
+            boolean carcassHasFungiFromInput = false;
             
             //anden del er hvor mange der skal indsættes.
             String amountSize = parts[1];
             
+            //special case for carcass med fungi.
+            if (type.equals("carcass") && parts.length >= 3 && parts[1].equals("fungi")) {
+                carcassHasFungiFromInput = true;
+                amountSize = parts[2];   // "1-10" eller lign.
+            } else {
+                amountSize = parts[1];
+            }
             
             //hvis mængden der skal indsættes indeholder bindestreg.
             if(amountSize.contains("-")) {
@@ -124,14 +132,10 @@ public class Main {
 
             //K3-1a & K2-2a
             else if (type.equals("carcass")) {
-                boolean hasFungi = false;
-                if (parts.length > 2 && parts[2].equals("fungi")) {
-                    hasFungi = true;
-                }
-
-                for (int i = 0; i< amount; i++) {
-                    Location n1 = getEmptyLocation(w, size, r);
-                    w.setTile(n1, new Carcass());
+                for (int i = 0; i < amount; i++) {
+                    Location loc = getEmptyLocation(w, size, r);
+                    Carcass c = new Carcass(Carcass.default_meat, carcassHasFungiFromInput);
+                    w.setTile(loc, c);
                 }
             }
         }

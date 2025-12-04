@@ -41,6 +41,6 @@ public class Fungi implements Actor {
         }
     }
     public void dealDamage(Carcass target) {
-        target.consume(world ,this.damage);
+        //target.consume(world ,this.damage);
     }
 }
