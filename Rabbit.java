@@ -1,8 +1,30 @@
 import itumulator.world.Location;
 import itumulator.world.World;
+import itumulator.executable.DynamicDisplayInformationProvider;
+import itumulator.executable.DisplayInformation;
+import java.awt.Color;
 import java.util.*;
 
-public class Rabbit extends Animal {
+public class Rabbit extends Animal implements DynamicDisplayInformationProvider {
+
+    private boolean hasFungi = false;
+
+    public void infectWithFungi() {
+        this.hasFungi = true;
+    }
+
+    public boolean hasFungi() {
+        return hasFungi;
+    }
+
+    @Override
+    public DisplayInformation getInformation() {
+        if (hasFungi) {
+            return new DisplayInformation(Color.white, "rabbit-large-fungi");
+        } else {
+            return new DisplayInformation(Color.white, "rabbit-large");
+        }
+    }
 
     public Rabbit() {
         super(15,15,0);
