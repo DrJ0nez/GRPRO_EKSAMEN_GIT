@@ -15,7 +15,7 @@ public class Main {
         // sætter size til første input linje.
         int size = Integer.parseInt(scanner.nextLine());
         
-        int amount = 0;
+        int amount = 0; 
         Random r = new Random();
         String type = null;
         
