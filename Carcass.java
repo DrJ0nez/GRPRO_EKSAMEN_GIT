@@ -45,6 +45,17 @@ public class Carcass implements Actor {
             Location loc = world.getLocation(this);
             world.delete(this);
 
+        if (hasInternalFungi && loc != null) {
+            int ttl = 10 + (originalSize / 2); //Større ådsel = svamp lever længere
+            world.setTile(loc, new Fungi(ttl, originalSize));
+        }
+    }
+    }
+    public void depleteMeat() {
+        remainingMeat -= 10;
+        if(remainingMeat < 0) {
+            remainingMeat = 0;
+        }
             // Hvis der var svamp i ådselet, dukker den nu op på kortet (K3-2a)
             if (hasInternalFungi && loc != null) {
                 int ttl = 10 + originalSize / 2; // Større ådsel = Svamp lever længere (K3-2b)
@@ -64,3 +75,5 @@ public class Carcass implements Actor {
     public int getOriginalSize() {
         return originalSize;
 }
+
+
