@@ -56,12 +56,6 @@ public class Carcass implements Actor {
         if(remainingMeat < 0) {
             remainingMeat = 0;
         }
-            // Hvis der var svamp i ådselet, dukker den nu op på kortet (K3-2a)
-            if (hasInternalFungi && loc != null) {
-                int ttl = 10 + originalSize / 2; // Større ådsel = Svamp lever længere (K3-2b)
-                world.setTile(loc, new Fungi(ttl, originalSize));
-            }
-        }
     }
     
     public boolean hasInternalFungi() {
