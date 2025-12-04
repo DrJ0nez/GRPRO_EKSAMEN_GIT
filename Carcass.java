@@ -16,7 +16,7 @@ public class Carcass implements Actor {
         this(meat, false);
     }
     
-     public Carcass(int meat, boolean withFungi) {
+    public Carcass(int meat, boolean withFungi) {
         this.remainingMeat = meat;
         this.originalSize = Math.max(1, meat);
 
@@ -31,7 +31,6 @@ public class Carcass implements Actor {
         if (!world.contains(this)) return;
         
         age++;
-    }
 
     //K3-2a: Lille chance for at der kan opstå svamp i ådslet af sig selv
     if (!hasInternalFungi) {
@@ -42,7 +41,13 @@ public class Carcass implements Actor {
     }
 
     if (age >= maxAge || remainingMeat <= 0) {
+        Location loc = world.getLocation(this);
         world.delete(this);
-        return;
+
+        if (hasInternalFungi && loc != null) {
+            int ttl = 10 + (originalSize / 2); //Større ådsel = svamp lever længere
+            world.setTile(loc, new Fungi(ttl, originalSize));
+        }
+    }
     }
 }
