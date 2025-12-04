@@ -48,15 +48,17 @@ public class Carcass implements Actor {
         if (hasInternalFungi && loc != null) {
             int ttl = 10 + (originalSize / 2); //Større ådsel = svamp lever længere
             world.setTile(loc, new Fungi(ttl, originalSize));
+            }
         }
     }
-    }
+
+
     public void depleteMeat() {
         remainingMeat -= 10;
         if(remainingMeat < 0) {
             remainingMeat = 0;
         }
-        }
+    }
     
     public boolean hasInternalFungi() {
         return hasInternalFungi;
@@ -68,6 +70,7 @@ public class Carcass implements Actor {
 
     public int getOriginalSize() {
         return originalSize;
+    }
 }
 
 
