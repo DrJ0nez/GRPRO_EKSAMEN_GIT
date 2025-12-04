@@ -53,4 +53,14 @@ public class Carcass implements Actor {
         }
     }
     
+    public boolean hasInternalFungi() {
+        return hasInternalFungi;
+    }
+
+    public void infectWithFungi() {
+        this.hasInternalFungi = true;
+    }
+
+    public int getOriginalSize() {
+        return originalSize;
 }
