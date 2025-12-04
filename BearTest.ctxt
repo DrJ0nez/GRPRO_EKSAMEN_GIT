@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=BearTest
+comment1.params=
+comment1.target=void\ testBearCanBePlacedOnWorld()
+comment1.text=\n\ K2-4a\:\ Bj\u00F8rne\ kan\ placeres\ p\u00E5\ kortet\ n\u00E5r\ inputfilen\ beskriver\ det.\n\ Her\ tester\ vi\ blot,\ at\ en\ Bear\ kan\ s\u00E6ttes\ i\ verdenen.\n
+comment2.params=
+comment2.target=void\ testBearHuntsRabbit()
+comment2.text=\n\ K2-4b\:\ Bj\u00F8rne\ jager\ ligesom\ ulve\ og\ spiser\ alt\ (dvs.\ andre\ dyr).\n\ Vi\ tester,\ at\ en\ bj\u00F8rn\ spiser\ en\ kanin\ i\ n\u00E6rheden.\n
+comment3.params=
+comment3.target=void\ testBearStaysWithinTerritoryRadius()
+comment3.text=\n\ K2-5a\:\ Bj\u00F8rnen\ er\ territoriel\ og\ bev\u00E6ger\ sig\ sj\u00E6ldent\ ud\ af\ sit\ omr\u00E5de.\n\ moveInTerritory()\ holder\ bj\u00F8rnen\ inden\ for\ distance\ <\ 4\ fra\ territoriets\ centrum.\n\ Vi\ tester,\ at\ den\ efter\ mange\ ticks\ stadig\ er\ inden\ for\ radius.\n
+comment4.params=
+comment4.target=void\ testBearEatsBerriesAndBerryBushBecomesBush()
+comment4.text=\n\ K2-6a\:\ Bj\u00F8rne\ spiser\ b\u00E6r\ fra\ buske\ (BerryBush)\ i\ omr\u00E5det.\n\ Bear.forage()\ bruger\ BerryBush.eatBerry(world),\ der\ laver\ BerryBush\ ->\ Bush.\n\ Vi\ tester,\ at\ en\ BerryBush\ bliver\ til\ en\ Bush\ n\u00E5r\ bj\u00F8rnen\ har\ f\u00E5et\ nok\ hunger\ til\ at\ spise\ b\u00E6r.\n
+numComments=5

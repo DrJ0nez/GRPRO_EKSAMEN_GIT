@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=PlantTest
+comment1.params=
+comment1.target=void\ testGrassCanBePlacedOnWorld()
+comment2.params=
+comment2.target=void\ testGrassSpreadsOverTime()
+comment3.params=
+comment3.target=void\ testAnimalCanStandOnGrassWithoutRemovingIt()
+numComments=4

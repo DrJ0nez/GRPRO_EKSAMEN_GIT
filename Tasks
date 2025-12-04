@@ -1,0 +1,16 @@
+Tasks:
+
+Wolfcave
+WolfPack
+Bear
+Bear Territory
+Bush(Berries)
+Fight(ulv vs ulv, bear vs ulv)
+
+Notes:
+Vi har selv oprettet 2 integers kaldet maxAge og maxEnergy
+Oprettet superklasse Animal for bedre modulær design
+
+Overvejelser:
+Predators & Prey classes
+

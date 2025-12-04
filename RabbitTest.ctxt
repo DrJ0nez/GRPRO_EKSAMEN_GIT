@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=RabbitTest
+comment1.params=
+comment1.target=void\ testRabbitCanBePlacedOnWorld()
+comment1.text=\n\ Kaninen\ kan\ placeres\ p\u00E5\ kortet\ (Tema\ 1\:\ kaniner\ kan\ oprettes/placeres).\n
+comment2.params=
+comment2.target=void\ testRabbitDiesFromHungerWhenNoGrass()
+comment2.text=\n\ Kaninen\ d\u00F8r\ af\ sult,\ hvis\ der\ ikke\ er\ gr\u00E6s\ i\ verden.\n\ Vi\ laver\ en\ verden\ uden\ Plant\ og\ lader\ Program\ simulere,\n\ indtil\ kaninen\ sulter\ ihjel.\n
+comment3.params=
+comment3.target=void\ testRabbitEatsGrassAndSurvives()
+comment3.text=\n\ Kaninen\ spiser\ gr\u00E6s\:\n\ Vi\ s\u00E6tter\ en\ kanin\ ved\ siden\ af\ et\ stykke\ gr\u00E6s\ (Plant)\ og\ lader\n\ simuleringen\ k\u00F8re.\ P\u00E5\ et\ tidspunkt\ b\u00F8r\ Plant\ p\u00E5\ den\ position\ v\u00E6re\ v\u00E6k,\n\ mens\ kaninen\ stadig\ lever.\n
+comment4.params=
+comment4.target=void\ testRabbitAgeAndEnergyChangeOverTime()
+comment4.text=\n\ Kaninens\ alder\ og\ energi\ \u00E6ndrer\ sig\ over\ tid\:\n\ age\ skal\ stige,\ energy\ falde,\ n\u00E5r\ vi\ simulerer\ nogle\ ticks.\n
+comment5.params=
+comment5.target=void\ testRabbitsCanReproduce()
+comment5.text=\n\ Kaniner\ kan\ reproducere\ sig.\n\ Vi\ starter\ med\ \u00E9n\ kanin\ og\ lidt\ gr\u00E6s,\ og\ lader\ simuleringen\ k\u00F8re\ l\u00E6nge.\n\ P\u00E5\ et\ tidspunkt\ b\u00F8r\ der\ v\u00E6re\ flere\ kaniner\ i\ verden.\n
+comment6.params=
+comment6.target=void\ testRabbitCanDigHole()
+comment6.text=\n\ Kaniner\ kan\ grave\ huller\ (eller\ lave\ et\ hul,\ hvis\ de\ ikke\ har\ et\ i\ forvejen).\n\ Din\ Rabbit\ har\ et\ felt\ holeLocation,\ der\ bliver\ sat\ n\u00E5r\ den\ laver\ et\ hul.\n\ Vi\ tester,\ at\ kaninen\ efter\ noget\ tid\ har\ f\u00E5et\ en\ holeLocation,\ og\ at\n\ der\ findes\ et\ NonBlocking\ objekt\ (Hole)\ p\u00E5\ den\ position.\n
+comment7.params=
+comment7.target=void\ testRabbitMovesToHoleAtNight()
+comment7.text=\n\ N\u00E5r\ det\ bliver\ nat,\ skal\ kaninen\ g\u00E5\ i\ sit\ hul.\n\ Vi\ lader\ kaninen\ grave\ et\ hul\ og\ venter\ p\u00E5\ en\ nat-tick.\n\ N\u00E5r\ world.isNight()\ er\ true,\ og\ kaninen\ har\ hul,\ b\u00F8r\ den\ st\u00E5\ p\u00E5\ holeLocation.\n
+numComments=8

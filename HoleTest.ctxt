@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=HoleTest
+comment1.params=
+comment1.target=void\ testHoleCanBePlacedOnWorld()
+comment1.text=\n\ K1-3a\:\ Huller\ kan\ blive\ indsat\ n\u00E5r\ inputfiler\ beskriver\ det,\n\ eller\ graves\ af\ kaniner.\n\ Her\ tester\ vi\ den\ simple\ del\:\ at\ et\ Hole\ kan\ s\u00E6ttes\ i\ verdenen.\n\ (Selve\ "kaninen\ graver\ hul"-delen\ er\ d\u00E6kket\ i\ RabbitTest.testRabbitCanDigHole).\n
+comment2.params=
+comment2.target=void\ testAnimalCanStandOnHole()
+comment2.text=\n\ K1-3b\:\ Dyr\ kan\ st\u00E5\ p\u00E5\ et\ kaninhul\ uden\ der\ sker\ noget.\n\ Hole\ implementerer\ NonBlocking,\ s\u00E5\ et\ dyr\ kan\ st\u00E5\ p\u00E5\ samme\ felt.\n
+numComments=3

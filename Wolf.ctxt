@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Wolf
+comment1.params=
+comment1.target=Wolf()
+comment2.params=world
+comment2.target=void\ act(itumulator.world.World)
+comment3.params=pack
+comment3.target=void\ setWolfPack(WolfPack)
+comment4.params=
+comment4.target=itumulator.world.Location\ getCaveLocation()
+comment5.params=caveLocation
+comment5.target=void\ setCaveLocation(itumulator.world.Location)
+comment6.params=
+comment6.target=WolfPack\ getWolfPack()
+numComments=7
