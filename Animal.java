@@ -32,7 +32,10 @@ public abstract class Animal implements Actor {
         }
         
     }
-    
+    public int getCarcassMeatSize() {
+        return maxEnergy;
+    }
+
     public int getCurrentHealth() {
         return hp;
     } 

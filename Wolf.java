@@ -12,6 +12,8 @@ public class Wolf extends Animal {
         super(25, 100, 25);
         
     }
+
+
     @Override
     public void act(World world) {
         super.act(world);
@@ -163,7 +165,11 @@ public class Wolf extends Animal {
         
         
     }
-    
+    @Override
+    public int getCarcassMeatSize() {
+        return 25;
+    }
+
     public void setWolfPack(WolfPack pack) {
         this.pack = pack;
     }
