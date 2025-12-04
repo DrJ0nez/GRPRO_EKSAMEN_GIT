@@ -56,7 +56,7 @@ public class Carcass implements Actor {
         if(remainingMeat < 0) {
             remainingMeat = 0;
         }
-    }
+        }
     
     public boolean hasInternalFungi() {
         return hasInternalFungi;
