@@ -9,7 +9,11 @@ public class Fungi implements Actor {
     int damage = 15;
     Carcass host;
     int energy = 0;
+    boolean hasShape = false;
 
+    if(hasShape) {
+
+    }
     
 
     Fungi(Carcass host) {
@@ -19,12 +23,21 @@ public class Fungi implements Actor {
     public void act(World world) {
         Random r = new Random();
         energy += 5;
-        if(world.contains(host)) {
-            this.dealDamage(host);
+        if(host != null && world.contains(host)) {
+            this.dealDamage(world, host);
+            return;
         }
 
-        if(!world.contains(host)) {
+        if(host != null && !world.contains(host)) {
+            this.hasShape = true;
+            this.host = null;
+
+            if(!hasShape) {
+                return;
+            }
+            
             Location fungiLoc = world.getLocation(this);
+
             Set<Location> visibleTiles = world.getSurroundingTiles(fungiLoc, 3);
             Set<Carcass> nearbyCarcasses = world.getAll(Carcass.class, visibleTiles);
             List<Carcass> nearbyCarcassList = new ArrayList<>(nearbyCarcasses);
@@ -37,10 +50,11 @@ public class Fungi implements Actor {
 
                 }
                 target.infectWithFungi();
+
             }
         }
     }
-    public void dealDamage(Carcass target) {
-        //target.consume(world ,this.damage);
+    public void dealDamage(World world, Carcass target) {
+        target.consume(world ,this.damage);
     }
 }
