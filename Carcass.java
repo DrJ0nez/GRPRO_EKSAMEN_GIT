@@ -50,4 +50,12 @@ public class Carcass implements Actor {
         }
     }
     }
+    public void depleteMeat() {
+        remainingMeat -= 10;
+        if(remainingMeat < 0) {
+            remainingMeat = 0;
+        }
+    }
 }
+
+
